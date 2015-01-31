@@ -38,7 +38,8 @@ class LCategory extends CActiveRecord
         return parent::model($className);
     }
 
-    public static function getCategoryIdByName($name) {
+    public static function getCategoryIdByName($name) 
+    {
         foreach (self::$categoriesTags as $id => $category)  {
             if (strtolower($category) == strtolower($name)) {
                 return $id;
